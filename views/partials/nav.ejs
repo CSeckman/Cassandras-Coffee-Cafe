@@ -4,7 +4,14 @@
 </head>
 <body>
   <nav>
-    <h1>Welcome, <%= user ? user.profile.name : "friend" %></h1>
+    <% if (user) { %>
+      <a href="/messages" class="text-light text-decoration-none">
+        Create Custom Drink
+      </a>
+      <a href="/messages" class="text-light text-decoration-none">
+        Random Drink 
+      </a>
+      <% } %>
     <% if (user?.profile.avatar) { %>
       <div>
         <img class="profile-img"
@@ -13,7 +20,7 @@
         >
       </div>
     <% } %>
-      <% if (user) { %>
+    <% if (user) { %>
         <a href="/auth/logout">
           <button type="submit">Logout</button>
         </a>

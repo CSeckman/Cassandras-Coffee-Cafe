@@ -5,11 +5,11 @@
   <h1>
     <%= user.profile.name %>'s Profile'
   </h1>
-  <% profile.myFavs.forEach((myfavs) => { %>
-    <ul>
-      <%=  %> 
-    </ul>
-
+  <% profile.myFavs.forEach((fav) => { %>
+    <h1>
+      <%= fav.name %>
+    </h1>
+    
   <%}) %> 
   
 </main>

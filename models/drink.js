@@ -14,7 +14,7 @@ const drinkSchema = new mongoose.Schema({
   },
   brew: {
     type: String,
-    enum: ['Espresso', 'Cold Brew', 'Coffee', 'Chai Tea'],
+    enum: ['Coffee', 'Cold Brew', 'Espresso', 'Chai Tea'],
   },
   addShot: {
     type: Boolean,
@@ -22,16 +22,17 @@ const drinkSchema = new mongoose.Schema({
   },
   flavor: {
     type: String,
-    enum: ['Vanilla', 'Mocha', 'White Chocolate', 'Caramel', 'Hazelnut', 'Simple Syrup'],
+    enum: ['None','Vanilla', 'Mocha', 'White Chocolate', 'Caramel', 'Hazelnut', 'Pumpkin Spice', 'Simple Syrup'],
   },
   milk: {
     type: String,
-    enum: ['Whole Milk', 'Skim Milk', 'Creamer'],
+    enum: ['None', 'Whole Milk', 'Skim Milk', 'Creamer'],
   },
   whippedCream: {
     type: Boolean,
     default: true,
   },
+  drizzle: String,
   creator: {
     type: Schema.Types.ObjectId, ref: 'Profile'
   },

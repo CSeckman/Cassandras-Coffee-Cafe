@@ -21,9 +21,9 @@
     </label><br>
     <label>Brew: 
       <select name="brew">
-        <option value="Espresso">Espresso</option>
-        <option value="Cold Brew">Cold Brew</option>
         <option value="Coffee">Coffee</option>
+        <option value="Cold Brew">Cold Brew</option>
+        <option value="Espresso">Espresso</option>
         <option value="Chai Tea">Chai Tea</option>
       </select>
     </label><br>
@@ -32,16 +32,19 @@
     </label><br>
     <label>Flavor: 
       <select name="flavor">
+        <option value="None"> </option>
         <option value="Vanilla">Vanilla</option>
         <option value="Mocha">Mocha</option>
         <option value="White Chocolate">White Chocolate</option>
         <option value="Caramel">Caramel</option>
         <option value="Hazelnut">Hazelnut</option>
+        <option value="Pumpkin Spice">Pumpkin Spice</option>
         <option value="Simple Syrup">Simple Syrup</option>
       </select>
     </label><br>
     <label>Milk: 
       <select name="milk">
+        <option value="None"></option>
         <option value="Whole Milk">Whole Milk</option>
         <option value="Skim Milk">Skim Milk</option>
         <option value="Creamer">Creamer</option>
@@ -49,6 +52,9 @@
     </label><br>
     <label>Whipped Cream?
       <input type="checkbox" name="whippedCream">
+    </label><br>
+    <label>Drizzle:
+      <input type="text" name="drizzle">
     </label><br>
     <button type="submit">Order Drink</button>
   </form>

@@ -50,7 +50,7 @@ function addToFavs (req, res) {
     // save 
     profile.save(function(err) {
     // redirect to profile/index view
-    res.redirect(`/profiles`)
+    res.redirect(`/profiles/${profile._id}`)
     })
   }
 )}

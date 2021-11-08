@@ -4,12 +4,24 @@
 </head>
 <body>
   <nav>
-    <% if (user) { %>
-      <a href="/messages" class="text-light text-decoration-none">
-        Create Custom Drink
+    <% if (user) { %> 
+      <a 
+      href="/drinks/new" 
+      <%- title === 'Order Custom Drink' ? 'class="active"' : '' %>
+      >
+      Order Custom Drink
       </a>
-      <a href="/messages" class="text-light text-decoration-none">
-        Random Drink 
+      <a 
+      href="/drinks/:id" 
+      <%- title === 'Order Random Drink' ? 'class="active"' : '' %>
+      >
+      Order Random Drink
+      </a>
+      <a 
+      href="/drinks" 
+      <%- title === 'All Drinks' ? 'class="active"' : '' %>
+      >
+      Pick A Drink from Collection
       </a>
       <% } %>
     <% if (user?.profile.avatar) { %>

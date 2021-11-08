@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 const drinkSchema = new mongoose.Schema({
   name: String,
   size: {
-    type: Number,
-    enum: [12, 16, 24],
-    default: 16
+    type: String,
+    enum: ['Small', 'Medium', 'Large'],
+    default: 'Medium'
   },
   iced: {
     type: Boolean,
@@ -32,11 +32,7 @@ const drinkSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  brew: {
-    type: String,
-    enum: ['Espresso', 'Cold Brew', 'Coffee', 'Chai Tea'],
-  },
-  creator:{
+  creator: {
     type: Schema.Types.ObjectId, ref: 'Profile'
   },
   lovers:[{
@@ -44,7 +40,7 @@ const drinkSchema = new mongoose.Schema({
   }]
 })
 
-const Drink = mongoose.model('Drink', profileSchema)
+const Drink = mongoose.model('Drink', drinkSchema)
 
 export {
   Drink

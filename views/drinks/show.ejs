@@ -20,10 +20,10 @@
         <%= drink.addShot ? 'Extra Shot' : 'Regular' %>
       </li><br>
       <li>
-        add <%= drink.flavor %> 
+        Add <%= drink.flavor %> 
       </li><br>
       <li>
-        add <%= drink.milk %> 
+        Add <%= drink.milk %> 
       </li><br>
       <li>
         <%= drink.addShot ? 'Whipped Cream' : 'No Whipped Cream' %>
@@ -33,12 +33,12 @@
       </li><br>
     </ul>
   </div>
-  <a href="/drinks/<%= drink._id %>/profiles/<%= user.profile._id %>">
+  <a href="/drinks/<%= drink._id %>/profiles">
     <button type="submit" class="btn primary-btn">
       Add Drink To My Favorites
     </button>
   </a>
-  <a href="/drinks">
+  <a href="/drinks/new">
     <button type="submit" class="btn primary-btn">
       Create A New Drink
     </button>

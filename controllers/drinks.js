@@ -44,9 +44,9 @@ function show(req, res) {
 
 function addToFavs (req, res) {
   // find profile we want to add drink to
-  Profile.findById(req.user.id, function(err, profile) {
+  Profile.findById(req.user.profile._id, function(err, profile) {
     // push the drink obj id to that profile
-    profile.myFavs.push(req.body)
+    profile.myFavs.push(req.params.id)
     // save 
     profile.save(function(err) {
     // redirect to profile/index view

@@ -9,7 +9,16 @@
     <h1>
       <%= fav.name %>
     </h1>
-    
+    <h3>
+      <%= fav.size %>, 
+      <%= fav.iced ? 'Iced' : 'Hot' %>,
+      <%= fav.brew %>, 
+      <%= fav.addShot ? 'Add Extra Shot' : 'Regular' %>,
+      <%= fav.flavor %>, 
+      <%= fav.milk %>, 
+      <%= fav.whippedCream ? 'Add Whipped Cream' : 'No Whipped Cream' %>
+    </h3>
+  
   <%}) %> 
   
 </main>

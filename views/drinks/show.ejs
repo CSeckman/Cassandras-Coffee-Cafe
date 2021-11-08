@@ -2,9 +2,38 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1>
-    Your drink is ready
-  </h1>
+  <div class="drinkOrderSticker">
+    <ul>
+      <li>
+        Order for: <%= user.profile.name %> 
+      </li><br>
+      <li>
+        Drink Name: <%= drink.name %> 
+      </li><br>
+      <li>
+        <%= drink.iced ? 'Iced' : 'Hot' %>
+      </li><br>
+      <li>
+        <%= drink.brew %> 
+      </li><br>
+      <li>
+        <%= drink.addShot ? 'Extra Shot' : 'Regular' %>
+      </li><br>
+      <li>
+        add <%= drink.flavor %> 
+      </li><br>
+      <li>
+        add <%= drink.milk %> 
+      </li><br>
+      <li>
+        <%= drink.addShot ? 'Whipped Cream' : 'No Whipped Cream' %>
+      </li><br>
+      <li>
+        <%= drink.drizzle %> drizzle
+      </li><br>
+    </ul>
+  </div>
+
   
 </main>
 

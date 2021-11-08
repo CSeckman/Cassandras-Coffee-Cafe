@@ -1,4 +1,5 @@
 import { Drink } from '../models/drink.js'
+import { Profile } from '../models/profile.js'
 
 //render form to order a new drink
 function newDrink(req, res) {
@@ -41,8 +42,22 @@ function show(req, res) {
   })
 }
 
+function addToFavs (req, res) {
+  // find profile we want to add drink to
+  Profile.findById(req.user.id, function(err, profile) {
+    // push the drink obj id to that profile
+    profile.myFavs.push(req.body)
+    // save 
+    profile.save(function(err) {
+    // redirect to profile/index view
+    res.redirect(`/profiles`)
+    })
+  }
+)}
+
 export {
   newDrink as new, 
   create, 
-  show
+  show,
+  addToFavs
 }

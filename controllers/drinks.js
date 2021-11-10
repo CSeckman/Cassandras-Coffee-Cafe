@@ -37,10 +37,12 @@ function show(req, res) {
     res.render('drinks/show', {
       user: req.user,
       title: "Drink Details",
-      drink
+      drink, 
+      profile: req.user.proflie
     })
   })
 }
+
 
 function addToFavs (req, res) {
   // find profile we want to add drink to
@@ -55,9 +57,21 @@ function addToFavs (req, res) {
   }
 )}
 
+function edit(req, res) {
+  Drink.findById(req.params.id)
+  .then(drink => {
+    res.render('drinks/edit', {
+      title: 'Edit Drink Size',
+      drink, 
+      
+    })
+  })
+}
+
 export {
   newDrink as new, 
   create, 
   show,
-  addToFavs
+  addToFavs,
+  edit
 }

@@ -18,10 +18,10 @@
       Order Random Drink
       </a>
       <a 
-      href="/drinks" 
-      <%- title === 'All Drinks' ? 'class="active"' : '' %>
+      href="/profiles/<%= user.profile._id %>" 
+      <%- title === 'My Favorite Drinks' ? 'class="active"' : '' %>
       >
-      Pick A Drink from Collection
+      My Favorite Drinks
       </a>
       <% } %>
     <% if (user?.profile.avatar) { %>

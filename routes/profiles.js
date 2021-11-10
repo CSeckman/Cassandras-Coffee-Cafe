@@ -4,7 +4,7 @@ const router = Router()
 
 
 router.get('/:id', isLoggedIn, profilesCtrl.show )
-router.delete('/:id', isLoggedIn, profilesCtrl.deleteFav)
+router.delete('/favorites/:id', isLoggedIn, profilesCtrl.deleteFav)
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();

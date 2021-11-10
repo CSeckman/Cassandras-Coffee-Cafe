@@ -1,5 +1,6 @@
 import { Drink } from '../models/drink.js'
 import { Profile } from '../models/profile.js'
+import { Review } from '../models/review.js'
 
 //render form to order a new drink
 function newDrink(req, res) {

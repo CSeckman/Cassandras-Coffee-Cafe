@@ -1,5 +1,6 @@
 import { Drink } from '../models/drink.js'
 import { Profile } from '../models/profile.js'
+import { Memory } from '../models/memory.js'
 
 //index all fav drinks on profile view
 function show (req, res){

@@ -1,6 +1,6 @@
 import { Drink } from '../models/drink.js'
 import { Profile } from '../models/profile.js'
-import { Review } from '../models/review.js'
+import { Memory } from '../models/memory.js'
 
 //render form to order a new drink
 function newDrink(req, res) {
@@ -33,7 +33,7 @@ function create(req, res) {
 function show(req, res) {
   Drink.findById(req.params.id)
   .populate('creator')
-  .populate('lovers')
+  .populate('memorior')
   .then(drink => {
     res.render('drinks/show', {
       user: req.user,

@@ -36,8 +36,8 @@ const drinkSchema = new mongoose.Schema({
   creator: {
     type: Schema.Types.ObjectId, ref: 'Profile'
   },
-  reviews:[{
-    type: Schema.Types.ObjectId, ref: 'Review'
+  memory:[{
+    type: Schema.Types.ObjectId, ref: 'Memory'
   }]
 })
 

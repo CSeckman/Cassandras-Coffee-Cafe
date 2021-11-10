@@ -33,7 +33,7 @@ function create(req, res) {
 function show(req, res) {
   Drink.findById(req.params.id)
   .populate('creator')
-  .populate('memorior')
+  .populate('memory')
   .then(drink => {
     res.render('drinks/show', {
       user: req.user,
@@ -64,7 +64,7 @@ function edit(req, res) {
     console.log(drink)
     res.render('drinks/edit', {
       title: 'Edit Drink Size',
-      drink, 
+      drink,
       user: req.user
     })
   })

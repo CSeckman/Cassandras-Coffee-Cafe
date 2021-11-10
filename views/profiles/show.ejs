@@ -24,8 +24,8 @@
     <form action="/profiles/favorites/<%= fav._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete from Favorites</button>
     </form>
-    <form action="/profiles/favorites/<%= fav._id %>?_method=DELETE" method="POST">
-      <button type="submit">Write A Memoir</button>
+    <form action="/drinks/<%= fav._id %>" method="GET">
+      <button type="submit">Reminiscence</button>
     </form>
   <%}) %> 
   

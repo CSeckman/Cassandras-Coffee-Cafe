@@ -3,13 +3,8 @@
 
 <main>
   <div class="drinkOrderSticker">
+    <h1><%= drink.name %></h1>
     <ul>
-      <li>
-        Order for: <%= user.profile.name %> 
-      </li><br>
-      <li>
-        Drink Name: <%= drink.name %> 
-      </li><br>
       <li>
         <%= drink.size %> 
       </li><br>
@@ -41,11 +36,15 @@
       Add Drink To My Favorites
     </button>
   </a>
-  <a href="/drinks/new">
-    <button type="submit" class="btn primary-btn">
-      Create A New Drink
-    </button>
-  </a>
+  <div id="rem">
+    <h1>Reminiscence</h1>
+    <h3>Take yourself back to the times you enjoyed one of your favorite drink!</h3>
+    <a href="/drinks/new">
+      <button type="submit" class="btn primary-btn">
+        Add A New Entry
+      </button>
+    </a>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>

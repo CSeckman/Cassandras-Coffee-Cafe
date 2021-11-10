@@ -83,9 +83,10 @@ function update(req, res) {
 function createMemory(req, res) {
   const memory = new Memory(req.body)
   memory.save(function(err) {
-    console.log(err)
-    res.redirect(`/drinks/${drink._id}`)
-  })
+
+    // console.log(err)
+    res.redirect(`/drinks/${req.params.id}`)
+  }) 
 }
 
 export {

@@ -3,7 +3,10 @@ const Schema = mongoose.Schema
 
 const memorySchema = new mongoose.Schema({
   when: Date,
-  narrative: String
+  narrative: String,
+  // whichDrink: {
+  //   type: Schema.Types.ObjectId, ref: 'Drink'
+  // }
 }, {
   timestamps: true
 })

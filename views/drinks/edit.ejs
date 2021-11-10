@@ -7,7 +7,8 @@
   </h1>
   <form action="/drinks/<%= drink._id %>?_method=PATCH" method="POST">
     <label>Size: 
-      <select name="size" placeholder="<%= drink.size %>>
+      <select name="size">
+        <option value="drink.size"><%= drink.size %></option>
         <option value="Small">Small</option>
         <option value="Medium">Medium</option>
         <option value="Large">Large</option>

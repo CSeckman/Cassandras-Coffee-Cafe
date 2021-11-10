@@ -60,11 +60,22 @@ function addToFavs (req, res) {
 function edit(req, res) {
   Drink.findById(req.params.id)
   .then(drink => {
+    console.log(drink)
     res.render('drinks/edit', {
       title: 'Edit Drink Size',
       drink, 
-      
+      user: req.user
     })
+  })
+}
+
+function update(req, res) {
+  Drink.findByIdAndUpdate(req.params.id, req.body) 
+  .then(drink => {
+    res.redirect(`/drinks/${drink._id}`)
+  })
+  .catch(err => {
+    res.redirect(`/drinks/${drink._id}/edit`)
   })
 }
 
@@ -73,5 +84,6 @@ export {
   create, 
   show,
   addToFavs,
-  edit
+  edit, 
+  update
 }

@@ -18,8 +18,8 @@
       <%= fav.milk %>, 
       <%= fav.whippedCream ? 'Add Whipped Cream' : 'No Whipped Cream' %>
     </h3>
-    <form action="/drinks/<%= fav._id %>" method="GET">
-      <button type="submit">Order Drink</button>
+    <form action="/drinks/<%= fav._id %>/edit" method="GET">
+      <button type="submit">Edit Drink</button>
     </form>
     <form action="/profiles/favorites/<%= fav._id %>?_method=DELETE" method="POST">
       <button type="submit">Delete from Favorites</button>

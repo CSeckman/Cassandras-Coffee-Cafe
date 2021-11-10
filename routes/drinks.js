@@ -12,8 +12,10 @@ router.post('/', isLoggedIn, drinksCtrl.create)
 router.get('/:id', isLoggedIn, drinksCtrl.show)
 // push drink to profile
 router.get('/:id/profiles', isLoggedIn, drinksCtrl.addToFavs)
-//edit a drink size from favorites 
+//edit form
 router.get('/:id/edit', drinksCtrl.edit)
+//update drink with new size
+router.patch('/:id', isLoggedIn, drinksCtrl.update)
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();

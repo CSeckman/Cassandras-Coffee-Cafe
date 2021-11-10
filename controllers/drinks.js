@@ -39,7 +39,7 @@ function show(req, res) {
       user: req.user,
       title: "Drink Details",
       drink, 
-      profile: req.user.proflie
+      profile: req.user.profile
     })
   })
 }
@@ -80,11 +80,20 @@ function update(req, res) {
   })
 }
 
+function createMemory(req, res) {
+  const memory = new Memory(req.body)
+  memory.save(function(err) {
+    console.log(err)
+    res.redirect(`/drinks/${drink._id}`)
+  })
+}
+
 export {
   newDrink as new, 
   create, 
   show,
   addToFavs,
   edit, 
-  update
+  update,
+  createMemory
 }

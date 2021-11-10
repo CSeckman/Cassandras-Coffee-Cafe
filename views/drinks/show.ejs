@@ -39,11 +39,13 @@
   <div id="rem">
     <h1>Reminiscence</h1>
     <h3>Take yourself back to the times you enjoyed one of your favorite drink!</h3>
-    <a href="/drinks/new">
-      <button type="submit" class="btn primary-btn">
-        Add A New Entry
-      </button>
-    </a>
+    <form action="/drinks/<%= drink._id %>/memory" method="POST">
+      <label>Date:
+        <input type="date" name="when">
+      </label><br>
+      <textarea type="string" name="narrative" cols="70" rows="10" placeholder="Describe a time when you enjoyed this drink.."></textarea><br>
+      <button>Add New Entry</button>
+    </form>
   </div>
 </main>
 

@@ -2,7 +2,8 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const memorySchema = new mongoose.Schema({
-
+  when: Date,
+  narrative: String
 }, {
   timestamps: true
 })

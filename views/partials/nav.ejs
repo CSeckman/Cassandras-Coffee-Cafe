@@ -4,43 +4,43 @@
 </head>
 <body>
   <nav>
-    <% if (user) { %> 
-      <a 
-      href="/drinks/new" 
-      <%- title === 'Order Custom Drink' ? 'class="active"' : '' %>
-      >
-      Order Custom Drink
-      </a>
-      <a 
-      href="/drinks/:id" 
-      <%- title === 'Order Random Drink' ? 'class="active"' : '' %>
-      >
-      Order Random Drink
-      </a>
-      <a 
-      href="/profiles/<%= user.profile._id %>" 
-      <%- title === 'My Favorite Drinks' ? 'class="active"' : '' %>
-      >
-      My Favorite Drinks
-      </a>
-      <% } %>
-    <% if (user?.profile.avatar) { %>
-      <div>
-        <img class="profile-img"
-          src="<%= user.profile.avatar %>" 
-          alt="<%= user.profile.name %> avatar"
+    <img class="coffee-logo" src="images/photos/coffee.png" alt="logo">
+    <div class="left-nav">
+      <% if (user) { %> 
+        <h2>Cassandra's Coffee Cafe</h2>
+        <a 
+        href="/drinks/new" 
+        <%- title === 'Order Custom Drink' ? 'class="active"' : '' %>
         >
-      </div>
-    <% } %>
-    <% if (user) { %>
-        <a href="/auth/logout">
-          <button type="submit">Logout</button>
+        Order Custom Drink
         </a>
-    <% } else { %>
-      <a href="/auth/google" class="siwg-link">
-        <button type="submit" class="siwg">
-          <img id="siwg-image" alt="Sign in with Google" />
-        </button>
-      </a>
-    <% } %>
+        <a 
+        href="/profiles/<%= user.profile._id %>" 
+        <%- title === 'My Favorite Drinks' ? 'class="active"' : '' %>
+        >
+        My Favorite Drinks
+        </a>
+      <% } %>
+    </div>
+    <div class="right-nav">
+      <% if (user?.profile.avatar) { %>
+        <div>
+          <img class="profile-img"
+            src="<%= user.profile.avatar %>" 
+            alt="<%= user.profile.name %> avatar"
+          >
+        </div>
+      <% } %>
+      <% if (user) { %>
+          <a href="/auth/logout">
+            <button type="submit">Logout</button>
+          </a>
+      <% } else { %>
+        <a href="/auth/google" class="siwg-link">
+          <button type="submit" class="siwg">
+            <img id="siwg-image" alt="Sign in with Google" />
+          </button>
+        </a>
+      <% } %>
+    </div>
   </nav>

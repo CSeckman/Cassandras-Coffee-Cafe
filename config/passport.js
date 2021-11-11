@@ -3,6 +3,7 @@ import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
 import { User } from '../models/user.js'
 import { Profile } from '../models/profile.js'
 
+
 passport.use(
   new GoogleStrategy(
     {
@@ -16,8 +17,9 @@ passport.use(
         if (user) {
           return done(null, user)
         } else {
+          const splitName = profile.displayName.split(' ')
           const newProfile = new Profile({
-            name: profile.displayName,
+            name: splitName[0],
             avatar: profile.photos[0].value,
           })
           const newUser = new User({
@@ -42,6 +44,8 @@ passport.use(
     }
   )
 )
+
+
 
 passport.serializeUser(function (user, done) {
   done(null, user.id)

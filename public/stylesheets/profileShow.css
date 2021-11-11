@@ -64,3 +64,14 @@ main {
   
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-radius: 10px;
+  width: 20%;
+  margin: 20px;
+}

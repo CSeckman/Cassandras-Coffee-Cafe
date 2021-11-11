@@ -1,24 +1,18 @@
   <% if (!user) { %>
-    <link rel="stylesheet" href="/stylesheets/siwg.css">
+    <link rel="stylesheet" href="/stylesheets/siwg.css"/>
   <% } %>
 </head>
 <body>
   <nav>
-    <img class="coffee-logo" src="images/photos/coffee.png" alt="logo">
-    <div class="left-nav">
+    <img class="coffee-logo" src="/images/photos/coffee.png" alt="">
+    <div>
       <% if (user) { %> 
-        <h2>Cassandra's Coffee Cafe</h2>
-        <a 
-        href="/drinks/new" 
-        <%- title === 'Order Custom Drink' ? 'class="active"' : '' %>
-        >
-        Order Custom Drink
+        <h1>Cassandra's Coffee Cafe</h1>
+        <a href="/drinks/new">
+          <button class="btn btn-secondary">Order Custom Drink</button>
         </a>
-        <a 
-        href="/profiles/<%= user.profile._id %>" 
-        <%- title === 'My Favorite Drinks' ? 'class="active"' : '' %>
-        >
-        My Favorite Drinks
+        <a href="/profiles/<%= user.profile._id %>">
+          <button class="btn btn-secondary">My Favorite Drinks</button>
         </a>
       <% } %>
     </div>
@@ -33,7 +27,7 @@
       <% } %>
       <% if (user) { %>
           <a href="/auth/logout">
-            <button type="submit">Logout</button>
+            <button class="btn btn-secondary" type="submit">Logout</button>
           </a>
       <% } else { %>
         <a href="/auth/google" class="siwg-link">

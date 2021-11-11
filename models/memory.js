@@ -4,9 +4,7 @@ const Schema = mongoose.Schema
 const memorySchema = new mongoose.Schema({
   when: Date,
   narrative: String,
-  // whichDrink: {
-  //   type: Schema.Types.ObjectId, ref: 'Drink'
-  // }
+  author: {type: Schema.Types.ObjectId, ref: "Profile"}
 }, {
   timestamps: true
 })

@@ -32,14 +32,13 @@ function create(req, res) {
 
 function show(req, res) {
   Drink.findById(req.params.id)
-  .populate('creator')
   .populate('memory')
   .then(drink => {
+    // console.log(drink)
     res.render('drinks/show', {
       user: req.user,
       title: "Drink Details",
-      drink, 
-      profile: req.user.profile
+      drink
     })
   })
 }
@@ -81,12 +80,27 @@ function update(req, res) {
 }
 
 function createMemory(req, res) {
-  const memory = new Memory(req.body)
-  memory.save(function(err) {
+  req.body.author = req.user.profile._id
+  const mem = new Memory(req.body)
+  mem.save()
+    Drink.findById(req.params.id, function(err, drink) {
+      console.log(mem)
+      drink.memory.push(mem)
+      drink.save(function(err){
+        res.redirect(`/drinks/${req.params.id}`)
+      })
+    })
+}
 
-    // console.log(err)
-    res.redirect(`/drinks/${req.params.id}`)
-  }) 
+function deleteMemory(req, res) {
+  Drink.findById(req.params.drinkId)
+  .then(drink => {
+    const mems = drink.memory
+    mems.remove({_id: req.params.memoryId})
+    drink.save(function(err) {
+      res.redirect(`/drinks/${req.params.drinkId}`)
+    })
+  })
 }
 
 export {
@@ -96,5 +110,6 @@ export {
   addToFavs,
   edit, 
   update,
-  createMemory
+  createMemory,
+  deleteMemory
 }

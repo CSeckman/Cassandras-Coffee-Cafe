@@ -33,12 +33,7 @@ const drinkSchema = new mongoose.Schema({
     default: true,
   },
   drizzle: String,
-  creator: {
-    type: Schema.Types.ObjectId, ref: 'Profile'
-  },
-  memory:[{
-    type: Schema.Types.ObjectId, ref: 'Memory'
-  }]
+  memory:[{type: Schema.Types.ObjectId, ref: "Memory"}]
 })
 
 const Drink = mongoose.model('Drink', drinkSchema)

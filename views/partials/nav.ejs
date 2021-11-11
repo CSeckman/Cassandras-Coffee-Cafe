@@ -5,18 +5,22 @@
 <body>
   <nav>
     <img class="coffee-logo" src="/images/photos/coffee.png" alt="">
-    <div>
+    <div class="center-nav-div">
       <% if (user) { %> 
-        <h1>Cassandra's Coffee Cafe</h1>
-        <a href="/drinks/new">
-          <button class="btn btn-secondary">Order Custom Drink</button>
-        </a>
-        <a href="/profiles/<%= user.profile._id %>">
-          <button class="btn btn-secondary">My Favorite Drinks</button>
-        </a>
+        <div>
+          <h1>Cassandra's Coffee Cafe</h1>
+        </div>
+        <div class="nav-btns">
+          <a href="/drinks/new">
+            <button class="in-line btn btn-secondary">Order Custom Drink</button>
+          </a>
+          <a href="/profiles/<%= user.profile._id %>">
+            <button class="in-line btn btn-secondary">My Favorite Drinks</button>
+          </a>
+        </div>  
       <% } %>
     </div>
-    <div class="right-nav">
+    <div>
       <% if (user?.profile.avatar) { %>
         <div>
           <img class="profile-img"

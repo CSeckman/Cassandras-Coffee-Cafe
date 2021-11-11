@@ -50,11 +50,19 @@ nav {
 .coffee-logo {
   width: 75px;
   height: 75px;
+  margin: 1% 0 1% 0;
 }
 
-.heart-img {
-  width:30px;
-  height:30px;
+#avatar-div{
+  width: 75px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logout-btn{
+  padding: 1px 4px;
 }
 
 .profile-img {
@@ -71,3 +79,7 @@ main {
   
 }
 
+.heart-img {
+  width:30px;
+  height:30px;
+}

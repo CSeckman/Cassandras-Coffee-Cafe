@@ -4,11 +4,13 @@
 </head>
 <body>
   <nav>
-    <img class="coffee-logo" src="/images/photos/coffee.png" alt="">
+    <div id="coffee-logo-div">
+      <img class="coffee-logo" src="/images/photos/coffee.png" alt="">
+    </div>
     <div class="center-nav-div">
       <% if (user) { %> 
         <div>
-          <h1>Cassandra's Coffee Cafe</h1>
+          <h1 class="main-nav-h1">Cassandra's Coffee Cafe</h1>
         </div>
         <div class="nav-btns">
           <a href="/drinks/new">
@@ -20,7 +22,7 @@
         </div>  
       <% } %>
     </div>
-    <div>
+    <div id="avatar-div">
       <% if (user?.profile.avatar) { %>
         <div>
           <img class="profile-img"
@@ -31,7 +33,7 @@
       <% } %>
       <% if (user) { %>
           <a href="/auth/logout">
-            <button class="btn btn-secondary" type="submit">Logout</button>
+            <button class="btn btn-secondary" id="logout-btn" type="submit">Logout</button>
           </a>
       <% } else { %>
         <a href="/auth/google" class="siwg-link">

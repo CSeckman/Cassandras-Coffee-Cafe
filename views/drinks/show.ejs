@@ -3,42 +3,33 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <div class="drinkOrderSticker">
-    <h1><%= drink.name %></h1>
-    <ul>
-      <li>
-        <%= drink.size %> 
-      </li><br>
-      <li>
-        <%= drink.iced ? 'Iced' : 'Hot' %>
-      </li><br>
-      <li>
-        <%= drink.brew %> 
-      </li><br>
-      <li>
-        <%= drink.addShot ? 'Extra Shot' : 'Regular' %>
-      </li><br>
-      <li>
-        Add <%= drink.flavor %> 
-      </li><br>
-      <li>
-        Add <%= drink.milk %> 
-      </li><br>
-      <li>
-        <%= drink.addShot ? 'Whipped Cream' : 'No Whipped Cream' %>
-      </li><br>
-      <li>
-        <%= drink.drizzle %> drizzle
-      </li><br>
-    </ul>
+  <h1 class="drink-ready">Order ready for <%= user.profile.name %>!</h1>
+  <div class="card text-center">
+    <div class="card-header">
+      <h2 class="card-title"><%= drink.name %></h5>
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">
+      <%= drink.size %>, 
+      <%= drink.iced ? 'Iced' : 'Hot' %>,
+      <%= drink.brew %><br> 
+      <%= drink.addShot ? 'Extra Shot' : 'Regular' %>,
+      Add <%= drink.flavor %>,
+      Add <%= drink.milk %><br> 
+      <%= drink.addShot ? 'Whipped Cream' : 'No Whipped Cream' %>
+      <%= drink.drizzle %> drizzle
+      </h5>
+    </div>
+    <div class="card-footer">
+      <a href="/drinks/<%= drink._id %>/profiles">
+        <button type="submit" class="btn btn-secondary">
+          Add Drink To My Favorites
+        </button>
+      </a> 
+    </div>
   </div>
-  <a href="/drinks/<%= drink._id %>/profiles">
-    <button type="submit" class="btn btn-secondary">
-      Add Drink To My Favorites
-    </button>
-  </a>
+    
   <div id="rem">
-
     <form action="/drinks/<%= drink._id %>/memories" method="POST">
       <label>Date:
         <input type="date" name="when">

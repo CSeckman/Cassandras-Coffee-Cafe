@@ -39,10 +39,33 @@ nav {
   margin: 0 5px 5px 5px;
 }
 
+.center-nav-div{
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+#avatar-div{
+  width: 75px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logout-btn{
+  padding: 1px 4px;
+}
+
 .coffee-logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 5px;
+  width: 75px;
+  height: 75px;
+  margin: 1% 0 1% 0;
 }
 
 .heart-img {

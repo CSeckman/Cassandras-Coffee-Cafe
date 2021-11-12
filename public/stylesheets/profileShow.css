@@ -87,14 +87,6 @@ main {
   
 }
 
-.counter-bottom {
-  background-image: url("images/photos/green-marble.jpg");
-  background-size: cover;
-  width: 80%;
-  height: 20%;
-
-}
-
 /* only needed for profile show */
 .container {
   display: flex;

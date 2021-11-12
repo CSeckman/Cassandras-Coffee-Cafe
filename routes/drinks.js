@@ -16,10 +16,7 @@ router.get('/:id/profiles', isLoggedIn, drinksCtrl.addToFavs)
 router.get('/:id/edit', drinksCtrl.edit)
 //update drink with new size
 router.patch('/:id', isLoggedIn, drinksCtrl.update)
-//create a memory
-router.post('/:id/memories', isLoggedIn, drinksCtrl.createMemory)
-//delete memory
-router.delete('/:drinkId/memories/:memoryId', isLoggedIn, drinksCtrl.deleteMemory)
+
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();

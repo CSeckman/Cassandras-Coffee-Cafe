@@ -79,37 +79,11 @@ function update(req, res) {
   })
 }
 
-function createMemory(req, res) {
-  req.body.author = req.user.profile._id
-  const mem = new Memory(req.body)
-  mem.save()
-    Drink.findById(req.params.id, function(err, drink) {
-      console.log(mem)
-      drink.memory.push(mem)
-      drink.save(function(err){
-        res.redirect(`/drinks/${req.params.id}`)
-      })
-    })
-}
-
-function deleteMemory(req, res) {
-  Drink.findById(req.params.drinkId)
-  .then(drink => {
-    const mems = drink.memory
-    mems.remove({_id: req.params.memoryId})
-    drink.save(function(err) {
-      res.redirect(`/drinks/${req.params.drinkId}`)
-    })
-  })
-}
-
 export {
   newDrink as new, 
   create, 
   show,
   addToFavs,
   edit, 
-  update,
-  createMemory,
-  deleteMemory
+  update
 }

@@ -13,7 +13,6 @@ function index(req, res) {
     })
   })
   .catch(err => {
-    console.log(err)
     res.redirect('/')
   })
 }
@@ -31,7 +30,6 @@ function createMemory(req, res) {
     })
   }) 
   .catch(err => {
-    console.log(err)
     res.redirect('/')
   })
 }
@@ -47,7 +45,6 @@ function deleteMemory(req, res) {
     })
   })
   .catch(err => {
-    console.log(err)
     res.redirect('/')
   })
 }

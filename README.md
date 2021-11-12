@@ -1,72 +1,45 @@
-# MEN Stack with OAuth Template
+# **Cassandra's Coffee Cafe**
 
-This is a MEN Stack template that includes OAuth.
 
-Use this to go build things! 🚀
+## **Getting Started:**
 
-## To Use This Template
+One of the things in my life that will always brighten my day, no matter the mood, is a delicious coffee or chai drink! It is one of my favorite ways to spoil myself and others! 
 
-__Replace `<name-of-your-app-here>` in the commands below with the name of your app!__
+In this application, not only can you create and collect your favorite drinks, you can also collect "journal entries" based on times you enjoyed this drink. I feel like there is something so nostalgic about certain of my favorite drinks that always bring me back to an occasion, event or scenerio.  I hope you enjoy reminiscencing about your drink memories as much as I do! 
 
-```bash
-git clone https://github.com/SEI-Remote-WC/men-stack-oauth-template.git <name-of-your-app-here>
-cd <name-of-your-app-here>
-```
+Check it out [**here**](https://cassandras-coffee-cafe.herokuapp.com/)! 
 
-Once you are in the project directory:
+---
 
-```bash
-rm -rf .git
-```
+## Images
+![Main Page](/images/photos/Main-Page.png)
+![Collect Your Favorite Drinks](/images/photos/Favorite-Drinks.png)
+![Reminiscence](/images/photos/Reminiscence.png)
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
+---
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
+## Wire-frame
+![Main Page Wire-frame](/images/photos/Wire-Frame.png)
+![Favorite Drinks Wire-frame](/images/photos/Wire-Frame-2.png)
 
-Re-initialize a git repository:
+---
 
-```bash
-git init
-```
+## Technologies Used
+- HTML
+- CSS Flexbox
+- Bootstrap
+- JavaScript
+- Express
+- Mongoose
+- MongoDB
+- Method-Override
+- Google OAuth 2.0
+- Passport.js
+- Heroku Deployment
 
-Use the GitHub CLI to create a new project repository on GitHub:
+---
 
-```bash
-gh repo create <name-of-your-app-here>
-```
-
-Run npm i to fetch the template's dependencies:
-
-```bash
-npm i
-```
-
-Then, make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push -u origin main
-```
-
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_CALLBACK=http://localhost:3000/auth/google/oauth2callback
-GOOGLE_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-GOOGLE_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SESSION_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_SECRET`, and `SESSION_SECRET` with values that you provide.
-
-Delete this README.md
-
-You're done!
+## Stretch Goals / Next Steps
+- Animations
+- Add an api that grabs random drink
+- Random Drink Feature

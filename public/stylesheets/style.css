@@ -35,6 +35,9 @@ nav {
   padding: 10px;
   border: rgb(35, 50, 54, .5) 2px solid;
 }
+.nav-btn{
+  margin: 0 5px 5px 5px;
+}
 
 .center-nav-div{
   display: flex;
@@ -47,12 +50,6 @@ nav {
   margin: 0 20px;
 }
 
-.coffee-logo {
-  width: 75px;
-  height: 75px;
-  margin: 1% 0 1% 0;
-}
-
 #avatar-div{
   width: 75px;
   height: 75px;
@@ -63,6 +60,17 @@ nav {
 
 #logout-btn{
   padding: 1px 4px;
+}
+
+.coffee-logo {
+  width: 75px;
+  height: 75px;
+  margin: 1% 0 1% 0;
+}
+
+.heart-img {
+  width:30px;
+  height:30px;
 }
 
 .profile-img {
@@ -79,7 +87,15 @@ main {
   
 }
 
-.heart-img {
-  width:30px;
-  height:30px;
+.counter-bottom {
+  height: 20px; 
+  position: fixed; 
+  bottom:25%;
+  width:85%;
+}
+.counter-top{
+  height: 25%; 
+  position: fixed; 
+  bottom:0%;
+  width:80%;
 }

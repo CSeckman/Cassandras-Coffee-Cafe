@@ -32,7 +32,10 @@ const drinkSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  drizzle: String,
+  drizzle: {
+    type: String,
+    default: "No Drizzle"
+  },
   memory:[{type: Schema.Types.ObjectId, ref: "Memory"}]
 })
 

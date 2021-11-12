@@ -6,7 +6,23 @@
   <h1>
     Welcome to Cassandra's Coffee Cafe, <%= user ? user.profile.name : "friend" %>
   </h1>
-  
+  <div class="menus">
+    <div class="side-menus">
+      <img class="side-menus" src="/images/photos/left-menu.png" alt="">
+    </div>
+    <div id="middle-menu">
+      <img class="middle-menus" src="/images/photos/middle-menu.png" alt="">
+    </div>
+    <div class="side-menus">
+      <img class="side-menus" src="/images/photos/right-menu.png" alt="">
+    </div>
+  </div>
+  <div class="counter-top">
+    <img class="counter-top" src="/images/photos/green-marble.jpg" alt="">
+  </div>
+  <div class="counter-bottom">
+    <img class="counter-bottom" src="/images/photos/green-marble.jpg" alt="">
+  </div>
 </main>
 
 <%- include('./partials/footer') %>

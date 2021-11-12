@@ -135,3 +135,13 @@ main {
   bottom:33%;
   width:25%;
 }
+
+#drink-rem {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.dr {
+  margin: 25px;
+}

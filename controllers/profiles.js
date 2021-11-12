@@ -32,7 +32,21 @@ function deleteFav(req, res) {
   })
 }
 
+function index(req, res) {
+  Drink.findById(req.params.id)
+  .populate('memory')
+  .then(drink => {
+    // console.log(drink)
+    res.render('reminiscence/index', {
+      user: req.user,
+      title: "Drink Details",
+      drink
+    })
+  })
+}
+
 export {
   show, 
-  deleteFav
+  deleteFav,
+  index
 }

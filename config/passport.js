@@ -17,6 +17,7 @@ passport.use(
         if (user) {
           return done(null, user)
         } else {
+          // save only the users first name from display name
           const splitName = profile.displayName.split(' ')
           const newProfile = new Profile({
             name: splitName[0],

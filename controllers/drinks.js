@@ -1,6 +1,5 @@
 import { Drink } from '../models/drink.js'
 import { Profile } from '../models/profile.js'
-import { Memory } from '../models/memory.js'
 
 //render form to order a new drink
 function newDrink(req, res) {
@@ -30,20 +29,6 @@ function create(req, res) {
   })
 }
 
-function show(req, res) {
-  Drink.findById(req.params.id)
-  .populate('memory')
-  .then(drink => {
-    // console.log(drink)
-    res.render('drinks/show', {
-      user: req.user,
-      title: "Drink Details",
-      drink
-    })
-  })
-}
-
-
 function addToFavs (req, res) {
   // find profile we want to add drink to
   Profile.findById(req.user.profile._id, function(err, profile) {
@@ -57,10 +42,21 @@ function addToFavs (req, res) {
   }
 )}
 
+function show(req, res) {
+  Drink.findById(req.params.id)
+  // .populate('memory')
+  .then(drink => {
+    res.render('drinks/show', {
+      user: req.user,
+      title: "Drink Details",
+      drink
+    })
+  })
+}
+
 function edit(req, res) {
   Drink.findById(req.params.id)
   .then(drink => {
-    console.log(drink)
     res.render('drinks/edit', {
       title: 'Edit Drink Size',
       drink,

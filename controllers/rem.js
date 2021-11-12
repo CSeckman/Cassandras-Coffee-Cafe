@@ -6,7 +6,6 @@ function index(req, res) {
   Drink.findById(req.params.id)
   .populate('memory')
   .then(drink => {
-    // console.log(drink)
     res.render('reminiscence/index', {
       user: req.user,
       title: "Drink Details",
@@ -20,7 +19,6 @@ function createMemory(req, res) {
   const mem = new Memory(req.body)
   mem.save()
     Drink.findById(req.params.id, function(err, drink) {
-      console.log(mem)
       drink.memory.push(mem)
       drink.save(function(err){
         res.redirect(`/reminiscence/drinks/${drink._id}`)

@@ -25,10 +25,12 @@ body {
   color: rgb(42, 60, 64);
   font-family: var(--sans-serif);
   margin: 0;
+  font-size: 2rem;
 }
 
 h1 {
   font-family: var(--cursive);
+  font-size: 4rem;
 }
 
 nav {
@@ -47,6 +49,7 @@ nav {
 .center-nav-div{
   display: flex;
   flex-direction: column;
+  font-size: 1.6rem;
 }
 
 .nav-btns {
@@ -65,7 +68,7 @@ nav {
 
 .card-title {
   font-family: var(--cursive);
-  font-size: 20px;
+  font-size: 3.5rem;
 }
 
 #logout-btn{
@@ -97,6 +100,12 @@ main {
   
 }
 
+
+.top-of-page {
+  margin-top: 40px;
+  font-size: 5rem;
+}
+
 .menus {
   display: flex;
   justify-content: space-around;
@@ -109,6 +118,7 @@ main {
 
 .btn {
   margin: 1px;
+  font-size: 1.5rem;
 }
 
 .side-menus-img {

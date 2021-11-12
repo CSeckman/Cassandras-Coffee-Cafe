@@ -72,7 +72,7 @@ function edit(req, res) {
 function update(req, res) {
   Drink.findByIdAndUpdate(req.params.id, req.body) 
   .then(drink => {
-    res.redirect(`/drinks/${drink._id}`)
+    res.redirect(`/profiles/${req.user.profile._id}`)
   })
   .catch(err => {
     res.redirect(`/drinks/${drink._id}/edit`)

@@ -33,6 +33,10 @@ h1 {
   font-size: 4rem;
 }
 
+h3 {
+  font-size: 3rem;
+}
+
 nav {
   background-color: #a6d9d3;
   font-size: 1.6rem;
@@ -71,6 +75,10 @@ nav {
   font-size: 30px;
 }
 
+.card-text {
+  font-size: 2rem;
+}
+
 #logout-btn{
   padding: 1px 4px;
 }
@@ -101,7 +109,7 @@ main {
 
 .top-of-page {
   margin-top: 40px;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 .menus {
@@ -173,16 +181,31 @@ main {
 }
 
 .rem-container {
-  width: 90;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+.edit {
+  font-size: 8rem;
+}
+
+.edit-size {
+  font-size: 4rem;
+  margin: 5px;
+}
+
 .mem-card {
   border-radius: 10px;
-  width: 200px;
+  width: 30%;
   margin: 20px;
+}
+
+.mb-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .entry-btn {

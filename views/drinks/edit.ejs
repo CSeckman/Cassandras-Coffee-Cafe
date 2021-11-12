@@ -3,20 +3,20 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <h1 class="top-of-page">
+  <h1 class="edit top-of-page">
     <%= title %> 
   </h1>
-  <form action="/drinks/<%= drink._id %>?_method=PATCH" method="POST">
-    
-      <select name="size">
-        <option value="<%= drink.size %>"><%= drink.size %></option>
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
-      </select>
-    </label><br>
-    <button type="submit">Update Drink Size</button>
-  </form>
+    <form action="/drinks/<%= drink._id %>?_method=PATCH" method="POST">
+      <div class="mb-2">
+        <select class="form-select edit-size" name="size">
+          <option value="<%= drink.size %>"><%= drink.size %></option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select>
+        <button class="btn btn-secondary" type="submit">Update Drink Size</button>
+      </div>
+    </form>
 </main>
 
 <%- include('../partials/footer') %>

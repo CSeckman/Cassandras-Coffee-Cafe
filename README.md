@@ -12,15 +12,15 @@ Check it out [**here**](https://cassandras-coffee-cafe.herokuapp.com/)!
 ---
 
 ## Images
-![Main Page](images/photos/Main-Page.png)
-![Collect Your Favorite Drinks](images/photos/Favorite-Drinks.png)
-![Reminiscence](images/photos/Reminiscence.png)
+![Main Page](/public/images/photos/Main-Page.png)
+![Collect Your Favorite Drinks](/public/images/photos/Favorite-Drinks.png)
+![Reminiscence](/public/images/photos/Reminiscence.png)
 
 ---
 
 ## Wire-frame
-![Main Page Wire-frame](images/photos/Wire-Frame.png)
-![Favorite Drinks Wire-frame](images/photos/Wire-Frame-2.png)
+![Main Page Wire-frame](/public/images/photos/Wire-Frame.png)
+![Favorite Drinks Wire-frame](/public/images/photos/Wire-Frame-2.png)
 
 ---
 

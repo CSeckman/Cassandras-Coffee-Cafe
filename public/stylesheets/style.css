@@ -116,9 +116,9 @@ main {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  height: 39%; 
+  height: 35%; 
   position: fixed; 
-  top:15%;
+  top:20%;
   width:75%;
 }
 

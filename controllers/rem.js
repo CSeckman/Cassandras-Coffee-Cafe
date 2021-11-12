@@ -12,18 +12,28 @@ function index(req, res) {
       drink
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function createMemory(req, res) {
   req.body.author = req.user.profile._id
   const mem = new Memory(req.body)
   mem.save()
-    Drink.findById(req.params.id, function(err, drink) {
-      drink.memory.push(mem)
-      drink.save(function(err){
-        res.redirect(`/reminiscence/drinks/${drink._id}`)
-      })
+  Drink.findById(req.params.id)
+  .then(drink => {
+    drink.memory.push(mem)
+    drink.save()
+    .then(drink => {
+      res.redirect(`/reminiscence/drinks/${drink._id}`)
     })
+  }) 
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function deleteMemory(req, res) {
@@ -31,9 +41,14 @@ function deleteMemory(req, res) {
   .then(drink => {
     const mems = drink.memory
     mems.remove({_id: req.params.memoryId})
-    drink.save(function(err) {
+    drink.save()
+    .then(drink => {
       res.redirect(`/reminiscence/drinks/${req.params.drinkId}`)
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 

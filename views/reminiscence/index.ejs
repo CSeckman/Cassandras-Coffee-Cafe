@@ -44,7 +44,7 @@
             <%= memory.narrative %>
             <br>
             <br>
-            <%= memory.when.toLocaleDateString() %> 
+            <%= drink.memory ? memory.when.toLocaleDateString() : "" %> 
           </p>
         </div>
         <div class="card-footer">

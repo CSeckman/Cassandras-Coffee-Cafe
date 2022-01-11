@@ -26,6 +26,7 @@ body {
   font-family: var(--sans-serif);
   margin: 0;
   font-size: 2rem;
+  text-align: center;
 }
 
 h1 {
@@ -103,7 +104,6 @@ main {
 
 .top-of-page {
   margin-top: 40px;
-  font-size: 5rem;
   text-align: center;
 }
 
@@ -194,15 +194,19 @@ main {
 }
 
 /* only needed for profile show */
-.container {
+.prof-cont {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.card {
+.prof-card {
   border-radius: 10px;
   width: 20%;
   margin: 20px;
   min-width: 300px;
+}
+
+h3 {
+  text-align: center;
 }

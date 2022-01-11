@@ -35,6 +35,8 @@ h1 {
 
 h3 {
   font-size: 3rem;
+  text-align: center;
+  margin: 5px;
 }
 
 nav {
@@ -111,6 +113,7 @@ main {
 .top-of-page {
   margin-top: 40px;
   font-size: 6rem;
+  text-align: center;
 }
 
 .menus {
@@ -225,3 +228,15 @@ main {
   
 }
 
+.prof-cont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.prof-card {
+  border-radius: 10px;
+  width: 20%;
+  margin: 20px;
+  min-width: 300px;
+}

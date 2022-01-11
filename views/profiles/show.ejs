@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/profileShow.css"/>
+<link rel="stylesheet" href="/stylesheets/style.css"/>
 <%- include('../partials/nav') %>
 
 <main>
@@ -7,9 +7,9 @@
     <%= user.profile.name %>'s Favorite Drinks 
   </h1>
 
-  <div class="container">
+  <div class="prof-cont container">
     <% profile.myFavs.forEach((fav) => { %>
-      <div class="card text-center">
+      <div class="card prof-card text-center">
         <div class="card-header">
           <img class= "heart-img" src="/images/photos/heart.png" alt="">
         </div>

@@ -11,7 +11,7 @@
         <h2 class="card-title"><%= drink.name %></h5>
       </div>
       <div class="card-body">
-        <h5 class="card-text">
+        <h3 class="card-text">
         <%= drink.size %>, 
         <%= drink.iced ? 'Iced' : 'Hot' %>,
         <%= drink.brew %><br> 
@@ -20,7 +20,7 @@
         Add <%= drink.milk %><br> 
         <%= drink.addShot ? 'Whipped Cream' : 'No Whipped Cream' %>
         <%= drink.drizzle %> drizzle
-        </h5>
+        </h3>
       </div>
     </div>
     <div class="dr" id="rem">
@@ -44,7 +44,7 @@
             <%= memory.narrative %>
             <br>
             <br>
-            <%= memory.when %> 
+            <%= memory.when.toLocaleDateString() %> 
           </p>
         </div>
         <div class="card-footer">

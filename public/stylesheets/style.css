@@ -167,21 +167,13 @@ main {
 #order {
   font-size: 16px;
   height: 50px; 
-  /* position: fixed;  */
-  margin-left: 50px;
   bottom:30%;
-  width:300px;
+  width:200px;
   border-radius: 5px;
 }
 
-#order-div {
-  height: 50px; 
-  /* position: fixed;  */
-  bottom:33%;
-  width:25%;
-}
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .middle-menu-img{
     width: 250px;
     height: 170px;
@@ -194,7 +186,7 @@ main {
   }
   .menus{
     flex-direction: row;
-    margin-top: 25px;
+    margin-top: 50px;
   }
   .counter-top {
     height: 23px; 
@@ -211,16 +203,12 @@ main {
   }
   
   #order {
-    padding: 20px;
+    
     position: relative;
-    top: 55px;
+    top: 25px;
     width: 300px;
-    height: 100px;
-    margin-left: -100px;
-  }
-
-  #order-div {
-    width: 100px;
+    height: 50px;
+    margin-left: 0px;
   }
 }
 
@@ -254,16 +242,10 @@ main {
   }
   
   #order {
-    padding: 20px;
     position: relative;
     top: 35px;
     width: 200px;
     height: 75px;
-    margin-left: -50px;
-  }
-
-  #order-div {
-    width: 100px;
   }
 }
 

@@ -1,43 +1,44 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/style.css"/>
-<%- include('../partials/nav') %>
 
-<main>
-  <h1 class="top-of-page">
-    <%= user.profile.name %>'s Favorite Drinks 
-  </h1>
-
-  <div class="prof-cont container">
-    <% profile.myFavs.forEach((fav) => { %>
-      <div class="card prof-card text-center">
-        <div class="card-header">
-          <img class= "heart-img" src="/images/photos/heart.png" alt="">
+<main class='main-main'>
+  <div class="main-landing-div">
+    <%- include('../partials/nav') %>
+    <h1 class="top-of-page">
+      <%= user.profile.name %>'s Favorite Drinks 
+    </h1>
+    <div class="prof-cont container">
+      <% profile.myFavs.forEach((fav) => { %>
+        <div class="card prof-card text-center">
+          <div class="card-header">
+            <img class= "heart-img" src="/images/photos/heart.png" alt="">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= fav.name %></h5>
+            <p class="card-text">
+              <%= fav.size %>, 
+              <%= fav.iced ? 'Iced' : 'Hot' %>,
+              <%= fav.brew %>, 
+              <%= fav.addShot ? 'Add Extra Shot' : 'Regular' %>,
+              <%= fav.flavor %>, 
+              <%= fav.milk %>, 
+              <%= fav.whippedCream ? 'Add Whipped Cream' : 'No Whipped Cream' %>
+            </p>
+            <form action="/drinks/<%= fav._id %>/edit" method="GET">
+              <button class="btn btn-secondary"type="submit">Edit Drink</button>
+            </form>
+            <form action="/profiles/favorites/<%= fav._id %>?_method=DELETE" method="POST">
+              <button class="btn btn-secondary"type="submit">Delete from Favorites</button>
+            </form>
+          </div>
+          <div class="card-footer">
+            <form action="/reminiscence/drinks/<%= fav._id %>" method="GET">
+              <button class="btn btn-secondary"type="submit">Reminiscence</button>
+            </form>
+          </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title"><%= fav.name %></h5>
-          <p class="card-text">
-            <%= fav.size %>, 
-            <%= fav.iced ? 'Iced' : 'Hot' %>,
-            <%= fav.brew %>, 
-            <%= fav.addShot ? 'Add Extra Shot' : 'Regular' %>,
-            <%= fav.flavor %>, 
-            <%= fav.milk %>, 
-            <%= fav.whippedCream ? 'Add Whipped Cream' : 'No Whipped Cream' %>
-          </p>
-          <form action="/drinks/<%= fav._id %>/edit" method="GET">
-            <button class="btn btn-secondary"type="submit">Edit Drink</button>
-          </form>
-          <form action="/profiles/favorites/<%= fav._id %>?_method=DELETE" method="POST">
-            <button class="btn btn-secondary"type="submit">Delete from Favorites</button>
-          </form>
-        </div>
-        <div class="card-footer">
-          <form action="/reminiscence/drinks/<%= fav._id %>" method="GET">
-            <button class="btn btn-secondary"type="submit">Reminiscence</button>
-          </form>
-        </div>
-      </div>
-    <%}) %> 
+      <%}) %> 
+    </div>
   </div>
 </main>
 

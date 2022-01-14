@@ -166,8 +166,9 @@ main {
   display: flex;
   justify-items: center;
   align-items: center;
-  max-width: 470px;
+  max-width: 870px;
   min-width: 270px;
+  margin: 20px 30px;
 }
 
 .main-nav-h1 {
@@ -199,7 +200,7 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 90%;
   margin: 80px;
   background:rgba(185, 158, 123, 0.8)
 }
@@ -216,7 +217,23 @@ main {
   margin-bottom: 20px;
 }
 
+.btn {
+  font-size: 12px;
+}
 .btn-light {
-  border: solid 4px teal;
+  border: solid 2px teal;
   margin-bottom: 30px;
+  padding: 5px 10px;
+}
+
+.order-drink-title {
+  text-align: right;
+  margin-right: 30px;
+}
+
+.flex-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

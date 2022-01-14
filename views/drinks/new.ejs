@@ -5,72 +5,77 @@
 <main class="main-main">
   <div class="main-landing-div">
     <%- include('../partials/nav') %>
-    <h1 class="top-of-page">
-      <%= title %> 
-    </h1>
-    <div id="drink-form">
-      <form action="/drinks" method="POST">
-        <div class="mb-1">
-          <label class="form-label">Drink Name</label>
-          <input type="text" class="form-control" name="name">
-        </div>
-        <div class="mb-1">
-          <label class="form-label">Size</label>
-          <select class="form-select" name="size">
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-          </select>
-        </div>
-        <div class="mb-1">
+    <div class="flex-row">
+      <h1 class="top-of-page order-drink-title">
+        Order
+        </br>
+        Custom
+        </br>
+        Drink
+      </h1>
+      <div id="drink-form">
+        <form action="/drinks" method="POST">
+          <div class="mb-1">
+            <label class="form-label">Drink Name</label>
+            <input type="text" class="form-control" name="name">
+          </div>
+          <div class="mb-1">
+            <label class="form-label">Size</label>
+            <select class="form-select" name="size">
+              <option value="Small">Small</option>
+              <option value="Medium">Medium</option>
+              <option value="Large">Large</option>
+            </select>
+            
+          </div>
           <label class="form-label">Brew</label>
-          <select class="form-select" name="brew">
-            <option value="Coffee">Coffee</option>
-            <option value="Cold Brew">Cold Brew</option>
-            <option value="Espresso">Espresso</option>
-            <option value="Chai Tea">Chai Tea</option>
-          </select>
-        </div>
-        <div class="mb-1">
-          <label class="form-label">Add Flavor</label>
-          <select class="form-select" name="flavor">
-            <option value="None"> </option>
-            <option value="Vanilla">Vanilla</option>
-            <option value="Mocha">Mocha</option>
-            <option value="White Chocolate">White Chocolate</option>
-            <option value="Caramel">Caramel</option>
-            <option value="Hazelnut">Hazelnut</option>
-            <option value="Pumpkin Spice">Pumpkin Spice</option>
-            <option value="Simple Syrup">Simple Syrup</option>
-          </select>
-        </div>
-        <div class="mb-1">
-          <label class="form-label">Add Cream or Milk</label>
-          <select class="form-select" name="milk">
-            <option value="None"></option>
-            <option value="Whole Milk">Whole Milk</option>
-            <option value="Skim Milk">Skim Milk</option>
-            <option value="Creamer">Creamer</option>
-          </select>
-        </div>
-        <div class="mb-1">
-          <label class="form-label">Drizzle?</label>
-          <input type="text" class="form-control" name="drizzle">
-        </div>
-        <div class="mb-1 form-check">
-          <input type="checkbox" name="iced">
-          <label>Iced?</label>
-        </div>
-        <div class="mb-1 form-check">
-          <input type="checkbox" name="addShot">
-          <label>Add Extra Shot of Espresso? </label>
-        </div> 
-        <div class="mb-1 form-check">
-          <input type="checkbox" name="whippedCream">
-          <label>Whipped Cream? </label>
-        </div>
-        <button type="submit" class="btn btn-secondary">Submit</button>
-      </form>
+            <select class="form-select" name="brew">
+              <option value="Coffee">Coffee</option>
+              <option value="Cold Brew">Cold Brew</option>
+              <option value="Espresso">Espresso</option>
+              <option value="Chai Tea">Chai Tea</option>
+            </select>
+          <div class="mb-1">
+          </div>
+          <div class="mb-1">
+            <label class="form-label">Add Flavor</label>
+            <select class="form-select" name="flavor">
+              <option value="None"> </option>
+              <option value="Vanilla">Vanilla</option>
+              <option value="Mocha">Mocha</option>
+              <option value="White Chocolate">White Chocolate</option>
+              <option value="Caramel">Caramel</option>
+              <option value="Hazelnut">Hazelnut</option>
+              <option value="Pumpkin Spice">Pumpkin Spice</option>
+              <option value="Simple Syrup">Simple Syrup</option>
+            </select>
+          </div>
+          <div class="mb-1">
+            <label class="form-label">Add Cream or Milk</label>
+            <select class="form-select" name="milk">
+              <option value="None"></option>
+              <option value="Whole Milk">Whole Milk</option>
+              <option value="Skim Milk">Skim Milk</option>
+              <option value="Creamer">Creamer</option>
+            </select>
+          </div>
+          <div class="mb-1">
+            <label class="form-label">Drizzle?</label>
+            <input type="text" class="form-control" name="drizzle">
+          </div>
+          <div class="mb-1 form-check">
+            <input type="checkbox" name="iced">
+            <label>Iced?     . </label>
+            <input type="checkbox" name="whippedCream">
+            <label>Whipped Cream? </label>
+          </div>
+          <div class="mb-1 form-check">
+            <input type="checkbox" name="addShot">
+            <label>Add Extra Shot of Espresso? </label>
+          </div> 
+          <button type="submit" class="btn btn-light">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </main>

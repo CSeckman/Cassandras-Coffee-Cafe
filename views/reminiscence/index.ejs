@@ -37,23 +37,27 @@
     </div>
   </div>
   <div class="rem-container">
-    <% drink.memory.forEach((memory) => { %>
-      <div class="mem-card card text-center">
-        <div class="card-body">
-          <p class="card-text">
-            <%= memory.narrative %>
-            <br>
-            <br>
-            <%= drink.memory ? memory.when.toLocaleDateString() : "" %> 
-          </p>
+    <% if (drink.memory.length) { %> 
+      <% drink.memory.forEach((memory) => { %>
+        <div class="mem-card card text-center">
+          <div class="card-body">
+            <p class="card-text">
+              <%= memory.narrative %>
+              <br>
+              <br>
+              <%= memory.when.toLocaleDateString() %> 
+            </p>
+          </div>
+          <div class="card-footer">
+            <form action="/reminiscence/<%= drink._id %>/memories/<%= memory._id %>?_method=DELETE" method="POST">
+              <button class="btn btn-secondary" type="submit">Delete</button>
+            </form>
+          </div>
         </div>
-        <div class="card-footer">
-          <form action="/reminiscence/<%= drink._id %>/memories/<%= memory._id %>?_method=DELETE" method="POST">
-            <button class="btn btn-secondary" type="submit">Delete</button>
-          </form>
-        </div>
-      </div>
-    <%}) %> 
+      <%}) %> 
+    <% } else { %> 
+    <h2>No Memories Yet!</h2>
+    <% } %> 
   </div>
 </main>
 

@@ -20,9 +20,9 @@ html {
 }
 
 body {
-  background-color: #289e90;
+  background-image: url(/images/photos/karsten-winegeart-l24eJZ9cIQk-unsplash.jpg);
   /* Use a system font, if none are available use an available sans-sarif font */
-  color: rgb(42, 60, 64);
+  color: rgb(0, 20, 20);
   font-family: var(--sans-serif);
   margin: 0;
   font-size: 2rem;
@@ -40,8 +40,9 @@ h3 {
 }
 
 nav {
-  background: #a6d9d3;
+  background: #ffffff;
   font-size: 1.6rem;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -117,138 +118,6 @@ main {
 }
 
 
-/* landing page */
-
-.menus {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  height: 35%; 
-  /* position: fixed;  */
-  margin-top: 40px;
-  width:75%;
-
-}
-
-.btn {
-  margin: 1px;
-  font-size: 1.5rem;
-}
-
-.side-menus-img {
-  width: 300px;
-  height: 380px;
-  margin-top: 3px;
-  border: 5px solid slategrey;
-
-}
-
-.middle-menu-img {
-  margin-top: 40px;
-  width: 500px;
-  height: 300px;
-  border: 5px solid slategrey;
-}
-
-.counter-top {
-  height: 23px; 
-  position: fixed; 
-  bottom:25%;
-  width:85%;
-}
-
-.counter-bottom{
-  height: 25%; 
-  position: fixed; 
-  bottom:0%;
-  width:80%;
-}
-
-#order {
-  font-size: 16px;
-  height: 50px; 
-  bottom:30%;
-  width:200px;
-  border-radius: 5px;
-}
-
-
-@media (max-width: 900px) {
-  .middle-menu-img{
-    width: 250px;
-    height: 170px;
-  }
-
-  .side-menus-img {
-    width: 230px;
-    height: 300px;
-
-  }
-  .menus{
-    flex-direction: row;
-    margin-top: 50px;
-  }
-  .counter-top {
-    height: 23px; 
-    position: fixed; 
-    bottom:30%;
-    width:85%;
-  }
-  
-  .counter-bottom{
-    height: 30%; 
-    position: fixed; 
-    bottom:0%;
-    width:80%;
-  }
-  
-  #order {
-    
-    position: relative;
-    top: 25px;
-    width: 300px;
-    height: 50px;
-    margin-left: 0px;
-  }
-}
-
-@media (max-width: 500px) {
-  .middle-menu-img{
-    width: 350px;
-    height: 260px;
-    margin-left: -25px;
-  }
-
-  .side-menus-img {
-    width: 0px;
-    height: 0px;
-    border: none;
-  }
-  .menus{
-    flex-direction: column;
-  }
-  .counter-top {
-    height: 23px; 
-    position: fixed; 
-    bottom:25%;
-    width:85%;
-  }
-  
-  .counter-bottom{
-    height: 25%; 
-    position: fixed; 
-    bottom:0%;
-    width:80%;
-  }
-  
-  #order {
-    position: relative;
-    top: 35px;
-    width: 200px;
-    height: 75px;
-  }
-}
-
 
 #drink-rem {
   display: flex;
@@ -293,8 +162,12 @@ main {
   margin-top: 10px;
 }
 
-.drink-form {
-  width: 35%;
+#drink-form {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  max-width: 470px;
+  min-width: 270px;
 }
 
 .main-nav-h1 {
@@ -315,4 +188,35 @@ main {
   width: 20%;
   margin: 20px;
   min-width: 300px;
+}
+
+.main-main {
+  height: 100%
+}
+
+.main-landing-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 80px;
+  background:rgba(185, 158, 123, 0.8)
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coffee-image {
+  max-width: 55%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-light {
+  border: solid 4px teal;
+  margin-bottom: 30px;
 }

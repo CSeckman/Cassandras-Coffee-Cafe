@@ -1,24 +1,19 @@
 <%- include('./partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/style.css" />
-<%- include('./partials/nav') %>
 
-<main>
-  <div class="menus">
-      <img class="side-menus-img" src="/images/photos/left-menu.png" alt="">
-      <img class="middle-menu-img" src="/images/photos/center-menu.png" alt="">
-      <img class="side-menus-img" src="/images/photos/right-menu.png" alt="">
+<main class="main-main">
+  <div class="main-landing-div">
+    <%- include('./partials/nav') %>
+    <div class="content">
+      <img class="coffee-image" src="/images/photos/nathan-dumlao-coffee-photo.jpg" alt="coffee image">
+      <div id="order-div">
+        <a href="/drinks/new">
+          <button class="btn btn-light" id="order">Order Custom Drink</button>
+        </a>
+      </div>
+    </div>
   </div>
-  <div id="order-div">
-    <a href="/drinks/new">
-      <button class="btn btn-light" id="order">Order Custom Drink</button>
-    </a>
-  </div>
-  <div class="counter-top">
-    <img class="counter-top" src="/images/photos/green-marble.jpg" alt="">
-  </div>
-  <div class="counter-bottom">
-    <img class="counter-bottom" src="/images/photos/green-marble.jpg" alt="">
-  </div>
-</main>
+
+</main> 
 
 <%- include('./partials/footer') %>

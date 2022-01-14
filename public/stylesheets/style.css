@@ -15,7 +15,7 @@ html {
      in most browser configurations this will be 10px */
 :root {
     font-size: 62.5%;
-    --cursive: 'Amatic SC', cursive;
+    --cursive: 'Amatic SC';
     --sans-serif: 'Heebo', sans-serif;
 }
 
@@ -221,9 +221,10 @@ main {
 
 .btn {
   font-size: 12px;
+  font-family: var(--cursive);
 }
 .btn-light {
-  border: solid 2px teal;
+  /* border: solid 2px teal; */
   margin-bottom: 30px;
   padding: 5px 10px;
 }

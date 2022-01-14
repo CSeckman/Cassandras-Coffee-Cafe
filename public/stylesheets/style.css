@@ -269,4 +269,7 @@ main {
     text-align: center;
     margin: 0px;
   }
+  #drink-form {
+    justify-content: center;
+  }
 }

@@ -242,6 +242,10 @@ main {
   justify-content: center;
 }
 
+.btn-secondary {
+  background:rgba(34, 26, 16, 0.8);
+  border: none;
+}
 
 @media (max-width: 500px) {
   #drink-rem {

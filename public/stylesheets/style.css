@@ -174,7 +174,7 @@ main {
 .main-nav-h1 {
   font-size: 40px;
   text-align: center;
-  margin: 0px 50px;
+  margin: 0px;
   
 }
 
@@ -242,3 +242,9 @@ main {
   justify-content: center;
 }
 
+
+@media (max-width: 500px) {
+  #drink-rem {
+    flex-direction: column;
+  }
+}

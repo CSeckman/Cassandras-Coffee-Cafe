@@ -1,63 +1,67 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/style.css"/>
-<%- include('../partials/nav') %>
 
-<main class="main-landing-div">
-  <h1 class= "top-of-page">Reminiscence</h1>
-  <h3>Take yourself back to the times you enjoyed one of your favorite drink!</h3>
-  <div id="drink-rem">
-    <div class="dr drink card text-center">
-      <div class="card-header">
-        <h2 class="card-title"><%= drink.name %></h5>
-      </div>
-      <div class="card-body">
-        <h3 class="card-text">
-        <%= drink.size %>, 
-        <%= drink.iced ? 'Iced' : 'Hot' %>,
-        <%= drink.brew %><br> 
-        <%= drink.addShot ? 'Extra Shot' : 'Regular' %>,
-        Add <%= drink.flavor %>,
-        Add <%= drink.milk %><br> 
-        <%= drink.addShot ? 'Whipped Cream' : 'No Whipped Cream' %>
-        <%= drink.drizzle %> drizzle
-        </h3>
-      </div>
-    </div>
-    <div class="dr" id="rem">
-      <form action="/reminiscence/<%= drink._id %>/memories" method="POST">
-        <label>Date:
-          <input class="form-control" type="date" name="when">
-        </label><br>
-        <div class="form-group">
-          <label>Describe the narrative around enjoying this drink..</label>
-          <textarea class="form-control" type="string" name="narrative" rows="5"></textarea>
-        </div>
-        <button class="entry-btn btn btn-secondary">Add New Entry</button>
-      </form>
-    </div>
-  </div>
-  <div class="rem-container">
-    <% if (drink.memory.length) { %> 
-      <% drink.memory.forEach((memory) => { %>
-        <div class="mem-card card text-center">
+<main class="main-main">
+  <div class="main-landing-div">
+    <%- include('../partials/nav') %>
+    <div class="content">
+      <h1 class= "top-of-page">Reminiscence</h1>
+      <h3>Take yourself back to the times you enjoyed one of your favorite drink!</h3>
+      <div id="drink-rem">
+        <div class="dr drink card text-center">
+          <div class="card-header">
+            <h2 class="card-title"><%= drink.name %></h5>
+          </div>
           <div class="card-body">
-            <p class="card-text">
-              <%= memory.narrative %>
-              <br>
-              <br>
-              <%= memory.when.toLocaleDateString() %> 
-            </p>
-          </div>
-          <div class="card-footer">
-            <form action="/reminiscence/<%= drink._id %>/memories/<%= memory._id %>?_method=DELETE" method="POST">
-              <button class="btn btn-secondary" type="submit">Delete</button>
-            </form>
+            <h3 class="card-text">
+            <%= drink.size %>, 
+            <%= drink.iced ? 'Iced' : 'Hot' %>,
+            <%= drink.brew %><br> 
+            <%= drink.addShot ? 'Extra Shot' : 'Regular' %>,
+            Add <%= drink.flavor %>,
+            Add <%= drink.milk %><br> 
+            <%= drink.addShot ? 'Whipped Cream' : 'No Whipped Cream' %>
+            <%= drink.drizzle %> drizzle
+            </h3>
           </div>
         </div>
-      <%}) %> 
-    <% } else { %> 
-    <h2>No Memories Yet!</h2>
-    <% } %> 
+        <div class="dr" id="rem">
+          <form action="/reminiscence/<%= drink._id %>/memories" method="POST">
+            <label>Date:
+              <input class="form-control" type="date" name="when">
+            </label><br>
+            <div class="form-group">
+              <label>Describe the narrative around enjoying this drink..</label>
+              <textarea class="form-control" type="string" name="narrative" rows="5"></textarea>
+            </div>
+            <button class="entry-btn btn btn-secondary">Add New Entry</button>
+          </form>
+        </div>
+      </div>
+      <div class="rem-container">
+        <% if (drink.memory.length) { %> 
+          <% drink.memory.forEach((memory) => { %>
+            <div class="mem-card card text-center">
+              <div class="card-body">
+                <p class="card-text">
+                  <%= memory.narrative %>
+                  <br>
+                  <br>
+                  <%= memory.when.toLocaleDateString() %> 
+                </p>
+              </div>
+              <div class="card-footer">
+                <form action="/reminiscence/<%= drink._id %>/memories/<%= memory._id %>?_method=DELETE" method="POST">
+                  <button class="btn btn-secondary" type="submit">Delete</button>
+                </form>
+              </div>
+            </div>
+          <%}) %> 
+        <% } else { %> 
+        <h2>No Memories Yet!</h2>
+        <% } %> 
+      </div>
+    </div>
   </div>
 </main>
 

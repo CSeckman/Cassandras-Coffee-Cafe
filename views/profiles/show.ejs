@@ -24,17 +24,17 @@
               <%= fav.milk %>, 
               <%= fav.whippedCream ? 'Add Whipped Cream' : 'No Whipped Cream' %>
             </p>
-            <form action="/drinks/<%= fav._id %>/edit" method="GET">
-              <button class="btn btn-secondary"type="submit">Edit Drink</button>
-            </form>
-            <form action="/profiles/favorites/<%= fav._id %>?_method=DELETE" method="POST">
-              <button class="btn btn-secondary"type="submit">Delete from Favorites</button>
-            </form>
-          </div>
-          <div class="card-footer">
-            <form action="/reminiscence/drinks/<%= fav._id %>" method="GET">
-              <button class="btn btn-secondary"type="submit">Reminiscence</button>
-            </form>
+            <div class="edit-remove">
+              <form action="/drinks/<%= fav._id %>/edit" method="GET">
+                <button class="btn btn-secondary one" type="submit">Edit</button>
+              </form>
+              <form action="/profiles/favorites/<%= fav._id %>?_method=DELETE" method="POST">
+                <button class="btn btn-secondary two" type="submit">Remove</button>
+              </form>
+              <form action="/reminiscence/drinks/<%= fav._id %>" method="GET">
+                <button class="btn btn-secondary three"type="submit">Reminiscence</button>
+              </form>
+            </div>
           </div>
         </div>
       <%}) %> 

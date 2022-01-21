@@ -101,6 +101,9 @@ nav {
   margin: 1% 0 1% 0;
 }
 
+.card-header {
+  background:rgba(218, 207, 187, 0.8)
+}
 .heart-img {
   width:30px;
   height:30px;
@@ -252,10 +255,28 @@ main {
   justify-content: center;
 }
 
-.btn-secondary {
-  background:rgba(22, 16, 10, 0.8);
+.three, .btn-secondary, .btn-secondary:hover {
+  background:rgba(41, 30, 19, 0.8);
   border: none;
 }
+
+.one, .one:hover  {
+  background:rgba(121, 88, 56, 0.8);
+  border: none;
+}
+
+
+.two, .two:hover {
+  background:rgba(71, 53, 35, 0.8);
+  border: none;
+}
+
+.edit-remove {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 
 @media (max-width: 800px) {
   #drink-rem {
